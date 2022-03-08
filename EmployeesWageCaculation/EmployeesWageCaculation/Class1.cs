@@ -10,24 +10,25 @@ namespace EmployeesWageCaculation
     {
         public static void CheckEmployesPresent()
         {
-            int IS_FULL_TIME = 1;
+            int IS_FULL_TIME = 2;
+            int IS_PART_TIME = 1;
             int Emp_Rate_Per_Hour = 20;
             int empHrs = 0;
             int empWage = 0;
-            int totalEmpHrs = 0;
-            int totalWorkingDays = 0;
+   
 
             Random random = new Random();
-            int empCheck = random.Next(4);
-
-            if (empCheck == IS_FULL_TIME)
+            int empCheck = random.Next(2);
+            if (empCheck ==IS_PART_TIME)
             {
-                Console.WriteLine("Employee is present");
+                empHrs = 4;
+            }
+            else if (empCheck == IS_FULL_TIME)
+            {
                 empHrs = 8;
             }
             else
-            {
-                Console.WriteLine("Employee is absent");
+            {   
                 empHrs = 0;
             }
             empWage = empHrs * Emp_Rate_Per_Hour;
