@@ -27,7 +27,7 @@ namespace EmployeesWageCaculation
             {
                 empHrs = 8;
             }
-            else
+            else    
             {   
                 empHrs = 0;
             }
